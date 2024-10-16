@@ -1,0 +1,72 @@
+html, body {
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimento padrão */
+  height: 100%; /* Garante que o body tenha altura total */
+  width: 100vw;
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+.whisper-regular {
+  font-family: "Whisper", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* NAVIGATION BAR */ 
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      display: none;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .menu-icon {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+  }
+}
