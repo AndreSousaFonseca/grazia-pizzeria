@@ -4,51 +4,75 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+  <link rel="stylesheet" href="static/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> <!--Linking swiper-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="static/script.js"></script> 
   <title>GRAZIA PIZZERIA</title>
-  <!-- Page icon-->
   <link rel="icon" type="image/x-icon" href="static/logo.png">
   <!-- Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
+
 </head>
-
-  <body>
-
+<body>
   <!-- CRETE HERO SECTION -->
-  <div class="hero">
-    <!-- hero-section image-->
-    <img src="static/hero-image.png" alt="hero-image" style="width:100%">
-    <!-- hero-section menu-->
+
+  <!--<div class="hero">
+    <img src="static/hero-section-extended.png" alt="hero-image" style="width:100%">
     <div class="header-content">
-      <nav> <!--left nav bar-->
-          <ul class="left_nav_links">
-            <li class="clickable-div" id="scroll-to-section0"><a href="#About" style="text-decoration: none; color: white">Conheça-nos</a></li>
-            <li class="clickable-div" id="scroll-to-section1"><a href="#Nossa" style="text-decoration: none; color: white">Nossa pizza</a></li>
-            <li class="clickable-div" id="scroll-to-section2"><a href="#Cardapio" style="text-decoration: none; color: white">Cardápio</a></li>
-          </ul>
-      <img src="static/logo_dark.png" alt="Logo" class="logo", width=250px> <!--logo in hte midle-->
-        <!--right nav bar-->
-          <ul class="right_nav_links">
-            <li class="clickable-div" id="scroll-to-section4"><a href="#Depoimentos" style="text-decoration: none; color: white">Depoimentos</a></li>
-            <li class="clickable-div" id="scroll-to-section5"><a href="#Contacto" style="text-decoration: none; color: white">Contacto</a></li>
-            <li class="clickable-div" id="scroll-to-section5"><a href="#Informação" style="text-decoration: none; color: white">Informações</a></li>
-          </ul>
+      <img src="static/logo.png" alt="Logo" class="logo">
+      <h1>GRAZIA</h1>
+      <nav class="menu">
+        <ul>
+          <li class="clickable-div" id="scroll-to-section0"><a href="#About" style="text-decoration: none; color: white">Conheça-nos</a></li>
+          <li class="clickable-div" id="scroll-to-section1"><a href="#Nossa" style="text-decoration: none; color: white">Nossa pizza</a></li>
+          <li class="clickable-div" id="scroll-to-section2"><a href="#Cardapio" style="text-decoration: none; color: white">Cardápio</a></li>
+          <li class="clickable-div" id="scroll-to-section3"><a href="#Galeria" style="text-decoration: none; color: white">Galeria</a></li>
+          <li class="clickable-div" id="scroll-to-section4"><a href="#Depoimentos" style="text-decoration: none; color: white">Depoimentos</a></li>
+          <li class="clickable-div" id="scroll-to-section5"><a href="#Contacto" style="text-decoration: none; color: white">Contacto</a></li>
+          <li class="clickable-div" id="scroll-to-section5"><a href="#Informação" style="text-decoration: none; color: white">Informações</a></li>
+        </ul>
       </nav>
-      <button class="menu-icon" id="menu-icon">&#9776;</button>
-    </div>
+    </div>-->
+
+<!-- CRETE HERO SECTION -->
+<header class="hero-header">
+  <img src="static/logo-dark.png" alt="Logo" class="hero-logo">
+</header>
+
+<div class="hero" style="position: relative; width: 100%; height: auto;" id= "Hero">
+  <img src="static/ahero.jpeg" alt="hero-image" class="responsive-image" width="100%"><!-- hero-section image-->
+  <div class="navigation_bar"><!-- hero-section Menu-->
+      <div class="hero_container" >
+          <nav>
+              <ul class="nav-links-left" id="links-nav">
+                <li class="clickable-div" id="scroll-to-section"><a href="#About" style="text-decoration: none; color: rgba(42,42,42)">Conheça-nos</a></li>
+                <li class="clickable-div" id="scroll-to-section"><a href="#Nossa" style="text-decoration: none; color: rgba(42,42,42)" >Nossa pizza</a></li>
+                <li class="clickable-div" id="scroll-to-section"><a href="#Cardapio" style="text-decoration: none; color: rgba(42,42,42)" >Cardápio</a></li>
+              </ul>
+              <ul class="nav-links-right" id="links-nav">
+                <li class="clickable-div" id="scroll-to-section"><a href="#Galeria" style="text-decoration: none; color: rgba(42,42,42)" >Galeria</a></li>
+                <li class="clickable-div" id="scroll-to-section"><a href="#Depoimentos" style="text-decoration: none; color: rgba(42,42,42)">Depoimentos</a></li>
+                <li class="clickable-div" id="scroll-to-section"><a href="#Informacao" style="text-decoration: none; color: rgba(42,42,42)" >Informações</a></li>
+              </ul>
+          </nav>
+          <button class="menu-icon" id="menu-icon">&#9776;</button>
+      </div>
+  </div>
 
      <!-- welcome info -->
      <div class="welcome-container">
-      <p style="margin-bottom:0vw;">Bem-vindo </p>
-      <p style="margin : 0vw; padding-top:0vw;"></pstyle>à GRAZIA</p>
-      <p style="margin : 0vw; padding-top:0vw;"></p>PIZZEIRA</p>
+      <p style="margin-bottom:0vw;" class="welcome_title">Bem-vindo</p>
+      <p style="margin : 0vw; padding-top:0vw;" class="welcome_title">à GRAZIA</p>
+      <p style="margin : 0vw; padding-top:0vw;" class="welcome_title">PIZZERIA</p>
+      <p class="welcome_p"> Eleve o seu evento com a sofisticação de uma jornada</p> 
+      <p class="welcome_p"> gastronômica, apreciando a autêntica pizza napoletana.</p>
     </div>
 
     <!-- Contact square -->
-    <div class="contact-container">
+    <div class="contact-container" onclick="scrollToContact('Contato')">
       <p>Entre em contacto connosco</p>
     </div>
 
@@ -56,7 +80,480 @@
     <div class="scroll-down-container" id="scroll-shape">
       <span>Scroll down</span>
       <div class="scroll-down-square" onclick="scrollToSection()">
-          <img src="static/logo.png" alt="Arrow" class="arrow" style="width: 60%; height: 60%; object-fit: contain;">
+          <img src="static/arrow(2).png" alt="Arrow" class="arrow" style="width: 60%; height: 60%; object-fit: contain;">
       </div>
   </div>
   </div>
+
+
+ <!-- CRETE ABOUT US SECTION -->
+ <div class="container", id="About">
+  <div class="about">
+      <img src="static/pizza_about.jpg" alt="pizza_about" class="image_about">
+      <div class="text-content">
+          <h2 class="la-belle-aurore-regular">Conheça-nos</h2>
+          <p class="about_text"> 
+            Na Grazia Pizzeria, oferecemos uma experiência gastronômica incomparável, onde a tradição.
+            Nossas pizzas Napoletanas são elaboradas com ingredientes importados diretamente da Itália e finalizadas
+            com produtos selecionados à mão, proporcionando uma experiência idêntica à das melhores
+            pizzerias de Nápoles. Cada pizza que servimos transforma-se em uma experiência memorável.
+            Com um menu cuidadosamente elaborado, temos o prazer de participar de eventos exclusivos, 
+            pequenas reuniões e degustações personalizadas. Deixe-nos levar o melhor da cozinha italiana
+            ao seu evento, garantindo uma jornada de sabores que ficará gravada na memória de todos.</p>
+          <div class="contact-box" onclick="scrollToContacts('Contato')">
+            <p>Entre em contacto connosco</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Nossa Pizza -->
+<div class="container_nossa_pizza" id="Nossa">
+   <!-- Create title --> 
+  <h2 class="la-belle-aurore-regular" style="font-size: 50px;">Nossa Pizza</h2> 
+  <div class="container_nossa">
+    <div class="container_nossa_text">
+      <div class="nossa_disc">
+        <h2>1. Borda Inflada</h2>
+        <p class="nossa_p"> A borda inflada é a marca icônica da pizza napoletana. A alta 
+          hidratação da massa somada a uma longa fermentação permitem que a
+          massa seja assada a mais de 400°C em menos de 90 segundos, processo que
+          intensifica o sabor da massa tornado-a mais saborosa, leve e digerível. 
+          Para alcançar este resultado utilizamos uma farinha especial importada da Itália.
+        </div>
+      <div class="nossa_disc">
+        <h2>2. Tomate San Marzano</h2>
+        <p class="nossa_p"> Base de tomate San Marzano, crescido na região vulcânica do Vesúvio em Itália, que confere um sabor único à nossa pizza.</p>
+      </div>
+      <div class="nossa_disc">
+        <h2 >3. Mozzarela di Bufala Fresca</h2>
+        <p class="nossa_p">Com a sua cremosidade única e sabor suave, a muzzarela de búfala fresca confere à nossa pizza napolitana sua autenticidade e riqueza inconfundível.</p>
+      </div>
+      <div class="nossa_disc">
+        <h2>4. Ingredientes Frescos</h2>
+        <p class="nossa_p"> Todos os ingredientes são selecionado à mão para trazer uma experiência única a cada fatia de nossa pizza.</p>
+      </div>
+    </div>
+      <img src="static/milanovo_idea.png" alt="pizza_about" class="image_nossa" width="45%">
+  </div>
+</div>
+
+
+  <!-- CRETE MENU SECTION -->
+<div class="container_cardapio", id="Cardapio">
+  <div class="cardapio_title">
+    <h2 class="la-belle-aurore-regular">Cardápio</h2>
+  </div>
+
+    <div class="Pizz">
+      <h2 class="Pizza">MARGHERITA</h2>
+      <p class= "description"> Molho de Tomate San Marzano, Mussarela de Búfala Fresca, Queijo Parmesão, Azeite e Manjericão</p>
+    </div>
+
+    <div class="Pizz">
+      <h2 class="Pizza">CAPRESE</h2>
+      <p class= "description "> Molho de Tomate San Marzano, Mussarela de Búfala Fresca, Queijo Parmesão, Tomate Defumado Molho Pesto e Manjericão</p>
+    </div>
+
+    <div class="Pizz">
+      <h2 class="Pizza">PRIMAVERA</h2>
+      <p class= "description "> Molho de Tomate San Marzano, Mussarela de Búfala Fresca, Queijo Parmesão, Queijo Brie, Geleia de Damasco e Manjericão </p>
+      </p>
+    </div>
+
+    <div class="Pizz">
+      <h2 class="Pizza">TIRRENO</h2>
+      <p class= "description "> Molho de Tomate San Marzano, Mussarela de Búfala Fresca, Queijo Parmesão, Peito de Peru, Catupiry, Geleia de Amora e Manjericão</p>
+      </p>
+    </div>
+
+    <div class="Pizz">
+      <h2 class="Pizza">DI PARMA</h2>
+      <p class= "description "> Molho de Tomate San Marzano, Mussarela de Búfala Fresca, Queijo Parmesão, Presunto Parma, Tomate Cereja e Rúcula</p> 
+      </p>
+    </div>
+
+    <div class="Pizz">
+      <h2 class="Pizza">BIANCA</h2>
+      <p class= "description "> Molho de Queijo Parmesão, Mussarela de Búfala Fresca, Mortadela, Tomate Cereja, Pistache, Ricota, Manjericão e Molho Pesto</p>
+      </p>
+    </div>
+
+    <div class="Pizz">
+      <h2 class="Pizza">FIORENZA</h2>
+      <p class= "description "> Molho de Tomate San Marzano, Mussarela de Búfala Fresca, Queijo Brie, Presunto Parma, Geleia de Damasco, Castanha de Caju e Hortelã</p>
+      </p>
+    </div>
+
+    <div class="Pizzas hidden">
+      <h2 class="Pizza">FIGARO</h2>
+      <p class= "description "> Queijo Mascarpone, Mussarela de Búfala Fresca, Queijo Parmesão, Presunto Parma, Figo, Rúcula e Mel</p>
+      </p>
+    </div>
+
+    <div class="Pizzas hidden">
+      <h2 class="Pizza">FIOCCO</h2>
+      <p class= "description "> Creme de Leite, Presunto Cotto, Mussarela de Búfala Fresca, Flocos de Batata, Parmesão, Pimenta do reino e Azeite</p>
+      </p>
+    </div>
+
+    <div class="Pizzas hidden">
+      <h2 class="Pizza">PEPPERONI</h2>
+      <p class= "description "> Molho de Tomate San Marzano, Mussarela de Búfala Fresca, Queijo Parmesão, Pepperoni, Geleia de pimenta defumada</p>
+      </p>
+    </div>
+
+    <div class="Pizzas hidden">
+      <h2 class="Pizza">QUATRO FORMAGI</h2>
+      <p class= "description ">Molho de Tomate San Marzano, Mussarela de Búfala Fresca, Queijo Parmesão, Queijo Brie e Queino Gorgonzola</p>
+      </p>
+    </div>
+
+    <div class="Pizzas hidden">
+      <h2 class="Pizza">DI POLLO</h2>
+      <p class= "description ">Molho de Tomate San Marzano, Mussarela de Búfala Fresca, Queijo Parmesão, Frango temperado e Catupiry</p>
+      </p>
+    </div>
+
+    <div class="Pizzas hidden">
+      <h2 class="Pizza">CALABRESA</h2>
+      <p class= "description "> Molho de Tomate San Marzano, Mussarela de Búfala Fresca, Queijo Parmesão, Calabresa e Cebola Roxa Caramelizada</p>
+      </p>
+    </div>
+
+    <div class="Pizzas hidden">
+      <h2 class="Pizza">TROVATA</h2>
+      <p class= "description "> Mel, Mussarela de Búfala Fresca, Fatias de Pêra e Queijo Gorgonzola</p>
+      </p>
+    </div>
+
+
+
+<!--Butões -->
+  <div class="text-container">
+    <button class="bt" id="showMoreBtn" onclick="showMore()">
+      <img src="static/arrow(2).png" alt="Logo" class="arrow1" style="width: 70%; height: 70%; object-fit: contain;">
+    </button>
+    <span class="span-container" id="showMoreText">Cardápio completo</span>
+  </div>
+
+<div class="text-container">
+    <button class="bt1" id="showLessBtn" onclick="showLess()" style="display: none;">
+      <img src="static/seta.png" alt="Logo" class="arrow1" style="width: 70%; height: 70%; object-fit: contain;">
+    </button>
+    <span class="span-container" id="showLessText" style="display: none;">Fechar cardápio</span>
+</div>
+
+ <!-- GALERIA -->   
+  <div class="galeria_container", id="Galeria">
+  <div class="galeira_title">
+    <h2 class="la-belle-aurore-regular">Galeria</h2>
+  </div>
+
+  <div class="containter_gallery">
+    <div class="item img1"> <img  src="static/pexels.jpg"></div>
+    <div class="item img2"><img  src="static/andiamo.jpg"></div>
+    <div class="item img3"><img  src="static/parma.jpg"></div>
+    <div class="item img4"><img  src="static/top.jpeg"></div>
+    <div class="item img5"><img  src="static/vege.jpg"></div>
+    <div class="item img6"><img  src="static/pistache.jpg"> </div>
+    <div class="item img7"><img  src="static/tomate.jpg"></div>
+    <div class="item img8"><img  src="static/parma2.jpg"></div> 
+    <div class="item img9"><img  src="static/wine.jpeg"></div>
+    <div class="item img10"><img  src="static/andiamo_cut.jpg"></div>
+    <div class="item img11"><img  src="static/Pizza tirreno 1.jpeg"></div> 
+    <div class="item img12"><img  src="static/fiorenza 5.jpeg"></div>
+    <div class="item img13"><img  src="static/pepperoni2.png"></div>
+ </div>
+</div>
+
+
+<!-- EVENTOS
+<div class="container_evento">
+  <div class="evento_title"><h2 class="fuggles-regular">Eventos em destaque</h2></div>
+
+  <div class="wrapper">
+    <div class="main-scroll-div">
+      <div><button class="icon" onclick="scrolll()">
+        <img  class="button-img" src="static/back_arr.png">
+      </button></div>
+      <div class = "cover">
+        <div class="scroll-images"  id="scrollImages">
+          <div class="btn1" onclick="playVideo('static/video_wine.mp4')">
+            <img class="child" src="static/wine.png">
+          </div>
+          <div class="btn2"><img class="child" src="static/amaral.png"></div>
+          <div class="btn3"><img class="child" src="static/aniversário_.png"></div>
+        </div>
+      </div>
+      <div><button class="icon"  onclick="scrollr()" >
+        <img class="button-img" src="static/forward_arr.png">
+      </button></div>
+    </div>
+  </div>
+</div>
+
+<div class="clip" id="clipContainer" style="display: none;">
+  <video id="videoPlayer" controls></video>
+  <b class="close" onclick="closeVideo()">Fechar</b>
+</div>
+-->
+
+
+<!--DEPOIMENTOS-->
+<div class="container_depoimentos", id="Depoimentos">
+  <div class="depoimentos_container">
+    <h2 class="la-belle-aurore-regular">Depoimentos</h2>
+  </div>
+  <!--Galeria de Depoimentos-->
+  <div class="container-body">
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!--Depoimento 1-->
+          <div class="swiper-slide">
+            <img src="static/p_grazi.png" alt="User image" class="user-image">
+            <h2 class="user-name">Grazi Leão</h2>
+            <p class="user-expression">Comentário via Whatsapp</p>
+            <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+            <p class="user-opinion">Nós simplesmente amámos, uma delícia, pizzas suaves e intensas ao mesmo tempo, saborosíssimas!!</p>
+          </div>
+           <!--Depoimento 2-->
+           <div class="swiper-slide">
+            <img src="static/p_alexandre.png" alt="User image" class="user-image">
+            <h2 class="user-name">Alexandre Valarse</h2>
+            <p class="user-expression">Comentário via Whatsapp</p>
+            <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+            <p class="user-opinion">Excelentes as pizzas! Impressionante a qualidade.</p>
+          </div>
+          <!--Depoimento 3-->
+          <div class="swiper-slide">
+            <img src="static/p_christiano_mota.png" alt="User image" class="user-image">
+            <h2 class="user-name">Christiano Mota</h2>
+            <p class="user-expression">Comentário via Whatsapp</p>
+            <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+            <p class="user-opinion">Legítima pizza italiana. Saborosa, massa deliciosa, molho ótimo. Estão de parabéns.</p>
+          </div>
+          <!--Depoimento 4-->
+          <div class="swiper-slide">
+            <img src="static/p_youssef.png" alt="User image" class="user-image">
+            <h2 class="user-name">Youssef</h2>
+            <p class="user-expression">Comentário via Whatsapp</p>
+            <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+            <p class="user-opinion">Melhor pizza da nossa vida. Fantástica, deliciosa, autêntica, uma borda de ir ao céu e voltar!</p>
+          </div>
+          <!--Depoimento 5-->
+          <div class="swiper-slide">
+            <img src="static/p_maria.png" alt="User image" class="user-image">
+            <h2 class="user-name">Maria Frota</h2>
+            <p class="user-expression">Comentário via Whatsapp</p>
+            <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+            <p class="user-opinion">Massa excelente, levinha e muito bem fermentada. Molho de tomate sensacional. Estão de Parabéns!</p>
+          </div>
+          <!--Depoimento 6-->
+          <div class="swiper-slide">
+            <img src="static/p_carol.png" alt="User image" class="user-image">
+            <h2 class="user-name">Carol Garcia</h2>
+            <p class="user-expression">Comentário via Whatsapp</p>
+            <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+            <p class="user-opinion">Bordas uma delícia! Comi com azeite e normalmente não como borda. Molho lever, mussarela de búfala deixa suave o sabor a queijo. Tudo perfeito! Nota 10.</p>
+          </div>
+          <!--Depoimento 7-->
+          <div class="swiper-slide">
+            <img src="static/p_felipev.png" alt="User image" class="user-image">
+            <h2 class="user-name">Felipe V</h2>
+            <p class="user-expression">Comentário via Whatsapp</p>
+            <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+            <p class="user-opinion">Pessoal veio de Maceió para experimentar a pizza. Gostaram muito. Meu primo dissque que foi a melhor que ele experimentou na vida.</p>
+          </div>
+          <!--Depoimento 8-->
+          <div class="swiper-slide">
+            <img src="static/p_luciana.png" alt="User image" class="user-image">
+            <h2 class="user-name">Luciana</h2>
+            <p class="user-expression">Comentário via Whatsapp</p>
+            <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+            <p class="user-opinion">Estou dando vosso contacto para todo o mundo eheh suas pizzas dão 10 a 0 de outras.</p>
+          </div>
+          <!--Depoimento 9-->
+          <div class="swiper-slide">
+            <img src="static/p_paulo.png" alt="User image" class="user-image">
+            <h2 class="user-name">Paulo</h2>
+            <p class="user-expression">Comentário via Whatsapp</p>
+            <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+            <p class="user-opinion">Me lembrou muito as de Itália, Roma, Veneza, Arezzo. Sabor perfeito.</p>
+          </div>
+          <!--Depoimento 10-->
+          <div class="swiper-slide">
+            <img src="static/p_joaosig.png" alt="User image" class="user-image">
+            <h2 class="user-name">Joao Signorelli</h2>
+            <p class="user-expression">Comentário via Whatsapp</p>
+            <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+            <p class="user-opinion">Delícia de pizzas, levinhas.</p>
+          </div>
+          <!--Depoimento 11-->
+          <div class="swiper-slide">
+            <img src="static/p_adrianav.png" alt="User image" class="user-image">
+            <h2 class="user-name">Adriana Vieira</h2>
+            <p class="user-expression">Comentário via Whatsapp</p>
+            <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+            <p class="user-opinion">Vosso trabalho é muito bom.</p>
+          </div>
+            <!--Depoimento 12-->
+            <div class="swiper-slide">
+              <img src="static/p_bira.png" alt="User image" class="user-image">
+              <h2 class="user-name">Bira</h2>
+              <p class="user-expression">Comentário via Whatsapp</p>
+              <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+              <p class="user-opinion">Pizzas maravilhosas!! Parabéns. Qualidade inigualável.</p>
+            </div>
+             <!--Depoimento 13-->
+             <div class="swiper-slide">
+              <img src="static/p_ursula.png" alt="User image" class="user-image">
+              <h2 class="user-name">Úrsula Andrade</h2>
+              <p class="user-expression">Comentário via Whatsapp</p>
+              <img src="static/quote_mark.png" alt="quotes image" class="quote-image">
+              <p class="user-opinion">Grata pela experiência deliciosa que nos proporcionaram.</p>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+  </div>
+ </div>
+
+
+<!--Informções-->
+<div class="Informacoes_container" id="Informacao">
+  <div class="informacoes_title">
+    <h2 class="la-belle-aurore-regular">Informações</h2>
+  </div>
+
+  <div class="outer-div">
+    <!--Location-->
+    <div class="inner-div">
+      <div class="image-scontainer">
+        <img src="static/curitiba1.png" alt="Image">
+      </div>
+      <h3 class="info_title">Local de atendimento</h3>
+      <p class="info_description">Atendemos Curitiba e região metropolitana. Para eventos fora dessas áreas, solicitamos que entre em contato conosco.</p>
+    </div>
+    <!--Service time-->
+    <div class="inner-div">
+      <div class="image-container">
+        <img src="static/trayplate.png" alt="Image">
+      </div>  
+      <h3 class="info_title">Duração do evento</h3>
+      <p class="info_description">Chegamos meia hora antes e após o início do evento, servimos por um período de 3 horas. Para a possibilidade de horas adicionais, entre em contacto connosco</p>
+    </div>
+    <!--Oven-->
+    <div class="inner-div">
+      <div class="image-tcontainer">
+        <img src="static/forno.png" alt="Image">
+    </div>
+      <h3 class="info_title">O que está incluso no evento</h3>
+      <p class="info_description">Forno, botijão de gás e utensílios para servir a pizza. Pratos, talheres e copos competem ao contratante que também deve assegurar o espaço de trabalho.</p>
+    </div>
+    <!--Peel-->
+    <div class="inner-div">
+      <div class="image-tcontainer">
+        <img src="static/pizzapeel.png" alt="Image">
+    </div>
+      <h3 class="info_title">Número de pessoas</h3>
+      <p class="info_description">Participamos de eventos que contemplem um mínimo de 10 participantes e um máximo de 30.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="Contacto_container" id="Contato">
+  <div class="contact_title">
+    <h2 class="la-belle-aurore-regular">Contacto</h2>
+  </div>
+  <p class="contact-description"> Para solicitar orçamentos e/ou informações adicionais utilize os meios de comunicação abaixo:</p>
+
+    <div class="container_contact">
+       <!--Whatsapp square-->
+      <div class="contact_square">
+        <!--Circle-->
+        <div class="circle">
+          <img src="static/whats1.jpg" alt="Image">
+        </div>
+        <h3 class="cont_title">Whatsapp</h3>
+        <h6 class= "cont_description">(41)996286598</h6>
+        <hr>
+        <!--Whatsapp button-->
+        <div class="wa-me">
+          <a href="https://wa.me/5541996286598" target="_blank">
+            <button class="btn">Fale connosco</button></a>
+        </div>
+      </div>
+
+       <!--Email square-->
+       <div class="contact_square">
+        <!--Circle-->
+        <div class="circle">
+          <img src="static/mail.jpg" alt="Image">
+        </div>
+        <h3 class="cont_title">Email</h3>
+        <h6 class="cont_description">graziapizzeria@gmail.com</h6>
+        <hr>
+        <!--Mail button-->
+        <div class="mail-me">
+          <a href="mailto:graziapizzeria@gmail.com?subject=Pedido%20de%20orçamento&body=Gostaria%20de%20solicitar%20um%20orçamento..." target="_blank">
+            <button class="btn">Fale connosco</button></a>
+          </div>
+      </div>
+
+      <!--Insta square-->
+      <div class="contact_square">
+        <!--Circle-->
+        <div class="circle">
+          <img src="static/insta.png" alt="Image">
+        </div>
+        <h3 class="cont_title">Instagram</h3>
+        <h6 class="cont_description">@graziapizzeria_</h6>
+        <hr>
+        <!--Mail button-->
+        <div class="insta-me">
+          <a href="https://www.instagram.com/graziapizzeria_/" target="_blank">
+            <button class="btn">Fale connosco</button>
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<script>
+  var swiper = new Swiper('.swiper', {
+    // Habilita navegação com setas
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // Habilita a paginação (bolinhas indicativas)
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    // Define quantos slides são exibidos por vez (alterável conforme necessidade)
+    slidesPerView: 6,
+    // Espaçamento entre os slides
+    spaceBetween: 20,
+    // Efeito de transição (opcional)
+    effect: 'slide', // 'fade', 'cube', 'coverflow', etc.
+    // Loop dos slides
+    loop: true,
+    // Adiciona autoplay (opcional)
+    autoplay: {
+      delay: 3000, // Tempo entre as transições automáticas
+      disableOnInteraction: false, // Continua após interação
+    },
+  });
+</script>
+
+</body>
+</html>

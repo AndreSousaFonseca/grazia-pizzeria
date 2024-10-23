@@ -1,72 +1,948 @@
-html, body {
-  margin: 0; /* Remove margens padrão */
-  padding: 0; /* Remove preenchimento padrão */
-  height: 100%; /* Garante que o body tenha altura total */
-  width: 100vw;
-  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
-}
+/* ---------------*/
+/*  PAGE SECTION  */
+/* ---------------*/
 
-.whisper-regular {
-  font-family: "Whisper", cursive;
+html, body {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    height: 100%; /* Garante que o body tenha altura total */
+    width: 100vw;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    margin-bottom: -100px;
+
+  }
+
+.la-belle-aurore-regular {
+  font-family: "La Belle Aurore", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
 
-/* NAVIGATION BAR */ 
-.header-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+/* -----------------*/
+/* 1.HEADER SECTION */
+/* -----------------*/
+.hero-header {
+  background: none;
+  display: flex;          /* Use flexbox to center the image */
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */         /* Full viewport height (optional, adjust as needed) */
+  padding-top: 20px; 
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+/* Ensure the logo image scales properly */
+.hero-logo {
+  width: 14vw;         /* Prevents the image from overflowing */
+  z-index: 1000
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
+  /* -----------------*/
+  /*  2.HERO SECTION  */
+  /* -----------------*/
+.hero {
+    margin-top: -60px;
+    position: fixed; /* Fixa o hero no topo da página */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    right: 0;
+    width: 100vw; /* Largura total da viewport */
+    height: 100vh; /* Altura total da viewport (opcional) */
+    z-index: 1; /* Garante que fique acima de outros elementos */
+    text-align: left; 
+    }
+
+  /* NAV BAR */
+.navigation_bar {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100vw;
+    z-index: 1
+  }
+
+  .hero_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav {
+    margin-top: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+  }
+
+.nav-links-left,
+.nav-links-right {
+    list-style: none;
+    padding: 0vw; /* Remove default padding */
+    margin: 0vw; /* Remove default margin */
 }
 
-.nav-links li {
-  margin: 0 15px;
-}
+  .nav-links-left {
+    list-style: none;
+    display: flex;
+    gap: 4vw;
+    margin-left: 5vw; /* Align to the left */
+  }
 
-.nav-links a {
-  text-decoration: none;
-  color: #000;
-  font-size: 16px;
+  .nav-links-right {
+    list-style: none;
+    display: flex;
+    gap: 4vw;
+    margin-right: 5vw; /* Align to the right */
+  }
+
+   a:visited {
+    color:  rgba(42,42,42); /* Same color as normal links */
 }
 
 .menu-icon {
-  display: none;
+    display: none;
+  }
+
+
+.clickable-div{
+    position: relative; /* Makes the pseudo-element positioning relative to the <li> */
+    display: inline-block; 
+    font-family: "La Belle Aurore";
+    font-size: 22.5px;
+    font-style: normal;
+    transition: border-bottom 0.5s ease; /* Smooth transition effect */
 }
 
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-  nav {
-      flex-direction: column;
+
+.clickable-div::after {
+    content: ''; /* Necessary for the pseudo-element */
+    position: absolute; /* Position relative to the menu item */
+    left: 0; /* Aligns the line to the center */
+    bottom: 5px; /* Position the line at the bottom of the <li> */
+    width: 0;
+    height: 2px; /* Thickness of the line */
+    background-color: #2A2A2A; /* Color of the line */
+    transition: width 0.5s ease; /* Smooth transition for width */
+}
+
+.clickable-div:hover::after {
+    width: 100%; /* Expands to full width on hover */
+}
+
+/*------------------- WELCOME CONTAINER----------- */
+
+.welcome-container {
+    position: absolute; /* Para posicionar dentro do hero */
+    top: 10vw;
+    margin-left: 5vw; 
+}
+.welcome_title{    
+    font-size: 4vw; /* Font size in viewport width */
+    color: rgba(42,42,42);
+    font-family: 'Arial'; /* Example using Montserrat */
+    font-weight: bold;
+}
+
+.welcome_p {
+    font-size: 1vw; /* Font size in viewport width */
+    color: rgba(42,42,42);
+    font-family: 'Arial'; /* Example using Montserrat */
+    margin-bottom: -5px;
+}
+
+/*------------------- CONTACT ----------- */
+  .contact-container {
+    position: absolute; /* Para posicionar dentro do hero */
+    top: 35vw;
+    margin-left: 5vw; 
+    padding: 0.5vw 5vw; /* Espaçamento interno */
+    border-radius: 10vw; /* Cantos arredondados */
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
+    z-index: 1; /* Garantir que fique acima de outros elementos */
+    font-family: 'Century Gothic';
+    color:  rgba(42,42,42);
+    border: 0.1vw solid rgba(42,42,42); /* White border */
+    font-size: 1vw; /* Font size in viewport width */
+    cursor: pointer;  
+    transition: background-color 0.6s ease, border 0.6s ease, color 0.6s ease;
   }
 
-  .nav-links {
-      flex-direction: column;
-      display: none;
+  .contact-container:hover {
+    background-color: rgba(42,42,42) ; /* Change background to white on hover */
+    border-color: transparent;
+    color: white; /* Change text color to transparent on hover */
   }
 
-  .nav-links.active {
+
+/*------------------- BUTTON ----------- */
+.scroll-down-container { /* Scroll down text and square */
+    position: absolute;
+    top: 42vw; /* Position it at the bottom of the hero section */
+    right: 10%; /* Position it on the left side */
+    display: flex;
+    align-items: center; /* Aligns the text and square horizontally */
+    font-family: 'Century Gothic';
+    color:  rgba(42,42,42);
+    font-size: 1vw; 
+  }
+
+    .scroll-down-square {
+      display: flex;             /* Ativa o Flexbox */
+      justify-content: center;    /* Centraliza a imagem horizontalmente */
+      align-items: center;        /* Centraliza a imagem verticalmente */
+      width: 100px;               /* Ajuste o tamanho do contêiner conforme necessário */
+      height: 100px;    
+      width: 3vw; /* Width of the square */
+      height: 3.5vw; /* Height of the square */
+      background-color: transparent; /* No background */
+      border: 0.1vw solid  rgba(42,42,42); /* White border */
+      border-radius: 40vw; /* Rounded edges */
+      box-sizing: border-box; 
       display: flex;
-  }
-
-  .menu-icon {
-      display: block;
-      background: none;
-      border: none;
-      font-size: 24px;
+      margin-left: 8vw; 
+      position: absolute; /* Optional: ensures it can be positioned precisely */
       cursor: pointer;
   }
+
+  .arrow {
+    fill: rgba(42, 42, 42, 1);
+}
+
+  .scroll-down-square:hover {
+    background-color: rgba(42,42,42) ; /* Change background to white on hover */
+    border-color: transparent;
+    color: white; /* Change text color to transparent on hover */
+  }
+
+.scroll-down-square:hover .arrow{
+    filter: brightness(0) invert(1);
+  }
+
+
+  /* ------------------*/
+  /*  2.ABOUT SECTION  */
+  /* ------------------*/
+.container { /* All containe */
+    display: flex;
+    justify-content: center; /* Centraliza a div dentro do container */
+    margin-top: 6vw;
+}
+
+  .about { /* Grey containe */
+    width: 100vw; /* Set the width to the full viewport width */
+    margin-left: 5vw; /* 6vw margin on the left */
+    margin-right: 5vw; /* 6vw margin on the right */
+    background-color: rgba(240, 240, 240, 1); /* Background color for visibility */
+    height: 35vw; /* Example height */
+    position: relative;
+    display: flex; /* Flexbox layout to place image and text next to each other */
+    align-items: center; /* Vertically center items */
+  }
+
+  .image_about { /* Grey containe */
+    width: 40vw;
+    margin-right: 0vw;
+    margin-left: -3vw; /* Move the image slightly outside the container */
+    position: relative; /* Ensures the image remains within the layout but shifts left */
+  }
+
+
+  .text-content {
+    width: 50%; /* Set the text content to take up 50% of the container */
+    padding: 60px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; /* Align the content to the top of text-content */
+    margin-top: -10vw; /* Set distance from the top of the container */
+  }
+
+  .about h2 {
+    font-size: 6vw;
+    font-family: "La Belle Aurore";
+    margin-bottom: -30px;
+  }
+
+  .about p {
+    text-align: justify;
+    font-family: 'Century Gothic';
+    font-size: 1vw;
+    line-height: 1.5
+  }
+
+
+  .contact-box{
+    bottom: 0; /* Alinha a parte inferior da caixa à parte inferior da imagem */
+    left: 50%; /* Centraliza horizontalmente */
+    border: 0.2vw solid black; /* Traço preto */
+    padding: 0.5vw 3vw; /* Espaçamento dentro da caixa */
+    text-align: center;
+    font-family: 'Arial'; /* Mesma fonte */
+    font-size: 1.5vw; /* Tamanho da fonte */
+    transform: translate(0%, 2vw); /* Move a caixa 20px para baixo (ajuste conforme necessário) */
+    cursor: pointer;
+    transition: 0.3s ease;  
+  }
+
+
+  .contact-box:hover{ 
+    background-color: rgba(42,42,42) ; /* Change background to white on hover */
+    border-color: transparent;
+    color: white; /* Change text color to transparent on hover */
+  }
+
+.about_text{
+    text-indent: 20px; 
+}
+
+
+  /* ------------------*/
+  /*  3. NOSSA PIZZA   */
+  /* ------------------*/
+  .container_nossa_pizza{
+    justify-content: center; /* Centraliza a div dentro do container */
+    margin-top: 6vw;
+    margin-left: 6vw; /* 6vw margin on the left */
+    margin-right: 3vw
+  }
+
+
+  /* Container do texto*/
+  .container_nossa{
+    margin-top: -7.5vw;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Container do paragrafos*/
+  .container_nossa_text{
+    display: flex;
+    flex-direction: column; /* Garante que os textos fiquem empilhados verticalmente */
+    flex: 1; /* Faz o container ocupar o espaço à esquerda da imagem */
+    padding-right: 50px; 
+  }
+
+  .nossa_disc {
+    margin-bottom: -8px; /* Reduz o espaçamento entre os blocos de texto */
+  }
+
+
+  .container_nossa_text h2 {
+    margin-bottom: -10px;
+    font-family: "La Belle Aurore";
+    color: rgba(198,137,62);
+  }
+
+  .nossa_p {
+    text-align: justify; /* Justifica o texto dos parágrafos */
+    margin-top: 0; /* Remove qualquer margem superior dos parágrafos para aproximá-los do <h2> */
+    font-family:'Century Gothic';
+    font-size: 1vw;
+  }
+
+  .image_nossa {
+    margin-top: 60px; /* Aumente o valor para baixar a imagem mais */
+  }
+
+  .description{
+    font-family:'Century Gothic';
+    font-size: 1vw;
+  }
+
+/* ------------------*/
+/*     4. Menu       */
+/* ------------------*/
+  .container_cardapio{
+    position: relative; /* Centraliza a div dentro do container */
+    margin-top: 6vw;
+    margin-left: 6vw; /* 6vw margin on the left */
+    margin-right: 6vw
+  }
+
+  .cardapio_title{
+    font-size: 3vw;
+    margin-bottom: -3vw;
+    margin-top: -2vw;
+  }
+
+
+  .Pizza{
+    font-family: "Century Gothic";
+    font-size: 1.5vw;
+    margin-bottom: -1.3vw ;
+  }
+
+  .hidden{
+    margin-bottom: -1.3vw ;
+  }
+
+  .description{
+    margin-top:-20 px;
+    font-size: 1.3vw;
+    color: rgba(88,88,88,255);
+  }
+
+  .Pizzas {
+    margin-left: -0px;
+    opacity: 0;                /* Inicialmente invisível */
+    max-height: 0;              /* Colapsado inicialmente */
+    overflow: hidden;           /* Esconde conteúdo que ultrapassa a altura */
+    transition: all 0.5s ease;  /* Transição suave para a altura e opacidade */
+    margin-top: -1.5vw;    /* Adiciona margem negativa para uniformidade com Pizz */
+    margin-bottom: -1.3vw;    /* Adiciona margem negativa para uniformidade com Pizz */
+
+    }
+
+  /* Quando a classe .show for aplicada, a altura será ajustada dinamicamente */
+  .Pizzas.show {
+    opacity: 1;
+    max-height: 500px;          /* Um valor maior para expandir conforme necessário */
+  }
+
+  .hidden {
+    display: block;             /* Para garantir que o display seja block */
+  }
+
+  .text-container {
+    position: relative;
+    display: flex;               /* Enables Flexbox */
+    justify-content: center;      /* Centers content horizontally */
+    align-items: center;          /* Centers content vertically */
+    flex-direction: column;       /* Stacks elements vertically (if needed) */
+    height: 100%;        
+  }
+
+  .bt {
+    display: block;              /* Garante que o botão ocupe uma linha inteira */
+    margin: 20px auto;           /* Centraliza horizontalmente e adiciona espaço acima e abaixo */
+    border: 1.2px solid black;     /* Outline preto */
+    background-color: transparent; /* Torna o botão transparente */
+    cursor: pointer;             /* Muda o cursor para indicar que o botão é clicável */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    width: 4vw; /* Width of the square */
+    height: 5vw; /* Height of the square */
+    border-radius: 40vw;
+    margin-top: 160px;  
+  }
+
+
+  .bt1 {
+    display: block;              /* Garante que o botão ocupe uma linha inteira */
+    margin: 20px auto;           /* Centraliza horizontalmente e adiciona espaço acima e abaixo */
+    border: 1.2px solid black;     /* Outline preto */
+    background-color: transparent; /* Torna o botão transparente */
+    cursor: pointer;             /* Muda o cursor para indicar que o botão é clicável */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    width: 4vw; /* Width of the square */
+    height: 5vw; /* Height of the square */
+    border-radius: 40vw;
+    margin-top: 20px;  
+  }
+
+
+  #last-visible-item {
+    margin-bottom: -1000px; /* Adjust this value as needed */
+  }
+
+  .bt:hover {
+    background-color: rgba(42,42,42) ; /* Change background to white on hover */
+    border-color: transparent;
+    color: white; /* Change text color to transparent on hover */
+  }
+
+  .bt1:hover {
+    background-color: rgba(42,42,42) ; /* Change background to white on hover */
+    border-color: transparent;
+    color: white; /* Change text color to transparent on hover */
+  }
+
+  .arrow-text{
+    position: absolute;
+    display: felx;
+    align-items: center; /* Aligns the text and square horizontally */
+    font-size: 1v;
+  }
+
+  .span-container {
+    margin-top: -1vw;        /* Espaçamento acima do span, para distanciar do botão */
+    font-family: Arial Nova;
+    font-size: 1vw;
+    text-align: center;     /* Centraliza o texto */
+  }
+
+  .pizzeria{
+    margin-bottom: -10vw;
+  }
+
+  #showMoreBtn:hover .arrow1{
+    filter: brightness(0) invert(1);
+  }
+
+  #showLessBtn:hover .arrow1{
+    filter: brightness(0) invert(1);
+  }
+
+
+/* ------------------*/
+/*    5. Galeria     */
+/* ------------------*/
+  .galeria_container {
+    justify-content: center;
+    margin-top: 0vw;
+    margin-left: 0vw;
+    margin-right: 0vw;
+  }
+
+  .galeira_title {
+    font-size: 3vw;
+    margin-bottom: -2vw;
+    margin-top: -2vw;
+  }
+
+  .containter_gallery {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 150px); /* Define uma altura fixa */
+    grid-template-areas:
+      "img1 img2 img3"
+      "img1 img2 img3"
+      "img4 img2 img3"
+      "img4 img6 img9"
+      "img7 img8 img9"
+      "img7 img5 img12"
+      "img10 img5 img13"
+      "img10 img11 img13";
+    justify-content: center;
+  }
+
+  /* Definir as áreas do grid */
+  .containter_gallery .img1 { grid-area: img1; }
+  .containter_gallery .img2 { grid-area: img2; }
+  .containter_gallery .img3 { grid-area: img3; }
+  .containter_gallery .img4 { grid-area: img4; }
+  .containter_gallery .img5 { grid-area: img5; }
+  .containter_gallery .img6 { grid-area: img6; }
+  .containter_gallery .img7 { grid-area: img7; }
+  .containter_gallery .img8 { grid-area: img8; }
+  .containter_gallery .img9 { grid-area: img9; }
+  .containter_gallery .img10 { grid-area: img10; }
+  .containter_gallery .img11 { grid-area: img11; }
+  .containter_gallery .img12 { grid-area: img12; }
+  .containter_gallery .img13 { grid-area: img13; }
+
+
+  /* Estilos para os itens da galeria */
+  .containter_gallery .item {
+    position: relative;
+    overflow: hidden; /* Garante que as imagens não transbordem do container */
+  }
+
+  /* Ajuste das imagens dentro do grid */
+  .item img {
+    width: 100%; /* Garante que a largura ocupe todo o espaço do grid item */
+    height: 100%; /* Garante que as imagens ocupem todo o espaço em altura */
+    object-fit: cover; /* Corta ou amplia a imagem para ajustar ao container */
+  }
+
+  /* Para garantir que os espaçamentos sejam uniformes, adicione também um reset para padding/margin das imagens */
+  .item img {
+    display: block;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.5s ease-in-out; /* Transição suave para o zoom */
+
+
+  }
+
+  .item:hover img {
+    transform: scale(1.2); /* Zoom de 10% */
+  }
+
+
+.about h2 {
+    font-size: 6vw;
+    font-family: "La Belle Aurore";
+    margin-bottom: -30px;
+  }
+
+
+  .wrapper{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+  }
+
+  .main-scroll-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .cover{
+    position: relative;
+    width: 90%;
+  }
+
+  .scroll-images{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+    position: relative;
+    scroll-behavior: smooth;
+    overflow-x: auto; /* Habilita a rolagem horizontal */
+    white-space: nowrap; /* Impede que os elementos internos quebrem linha */
+    scrollbar-width: none;
+    transition: transform 0.3s ease;
+  }
+
+
+  .child{
+    margin:10px ;
+    width: 200px;
+    cursor: grab;
+    border: 1px solid white;
+    overflow: hidden;
+  }
+
+  .scroll-images::-webkit-scrollbar{
+    display: none;
+  }
+
+  .child-img{
+    width: 100%;
+  }
+
+  .icon{
+    background-color: white;
+    border: none;
+  }
+
+  .button-img {
+    width: 20px; /* Adjust this size to make the button image smaller */
+    height: auto; /* Ensure the image keeps its aspect ratio */
+  }
+
+
+/* ------------------*/
+/*  6. Depoimentos   */
+/* ------------------*/
+.depoimentos_container {
+    font-size: 3vw;
+    margin-bottom: -2vw;
+    margin-top: -2vw;
+  }
+
+
+.container-body{
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    height: auto;
+    padding: 20px 0;
+}
+
+
+.swiper-wrapper .swiper-slide{
+    color: rgba(42,42,42);
+    width: 150px;
+    height: 150px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255,0.2);
+    margin-top: 10px;
+    margin-bottom: 70px ;
+}
+
+.swiper-slide{
+    box-shadow: 
+    0 0px 0px 0 rgba(255, 255, 255, 0.0), /* Top shadow (none) */
+    0 50px 50px -10px rgba(0, 0, 0, 0.05), /* Middle shadow (more visible on left and right) */
+    0 0px 0px 0px rgba(0, 0, 0, 0.05);  /* Bottom shadow */
+}
+
+/* Obtain user image*/
+.user-image{
+    width: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: -20px;
+    margin-top: -30px;
+    padding: 4px;
+}
+
+/* obtain the name of the indiviual*/
+.user-name{
+    font-family: Arial;
+    font-size: 12px;
+    margin-left: -20px;
+    margin-bottom: -5px ;
+}
+
+/* obtain the opinion of the indiviual*/
+.user-expression{
+    font-size: 0.6rem;
+    font-family: Arial;
+    color: rgba(87, 84, 84, 0.733);
+    margin-left: -20px;
+}
+
+/* obtain the quotation mark*/
+.quote-image {
+    align-self: flex-start; /* Moves the quote image to the left */
+    margin-left: 0; /* Makes sure there's no margin on the left */
+    width: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: -21px;
+    filter: brightness(0) invert(0.5)
+
+}
+
+
+.user-opinion{
+    font-size: 0.6rem;
+    font-family: Arial;
+    color: rgba(87, 84, 84, 0.733);
+    margin: 0px -10px 0px -10px;
+
+    margin-left: -20px;
+}
+
+.swiper-button-prev {
+    color: rgba(42,42,42); /* Change to your desired color */
+}
+
+
+
+.depoimentos_container {
+    font-size: 3vw;
+    margin-bottom: -2vw;
+    margin-top: -2vw;
+  }
+
+.swiper-button-prev .swiper-button-next{
+    background-color: white; /* Change to your desired color */
+}
+
+/* ------------------*/
+/*  6. Informações   */
+/* ------------------*/
+/* Container do título */
+.Informacoes_container {
+    margin-bottom: 6vw;
+    margin-top: -2vw;
+  }
+
+  /* Formatar o título */
+.informacoes_title{
+    font-size: 3vw;
+    margin-bottom: -2vw;
+}
+
+/* Outer div que vai conter as formas*/
+.outer-div {
+    display: flex;
+    justify-content: space-between; /* Ensures divs are spaced evenly across the full width */
+    width: 90%; /* Full width of the container */
+    margin: 0 auto; 
+}
+
+/* Formas*/
+.inner-div {
+    width: 200px;
+    height: 350px;
+    background-color: white;
+    border-top-left-radius: 100px;  /* Half of the width */
+    border-top-right-radius: 100px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+
+
+.inner-div:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.0);
+
+}
+
+.info_title{
+    font-size: 1.3vw;
+    font-family: "Century Gothic";
+    text-align: center;
+    font-weight: normal;
+
+}
+.info_description{
+    font-size: 0.9vw;
+    font-family: "Century Gothic";
+    text-align: center;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 10px;
+
+}
+
+.image-scontainer{
+    width: 120px;  /* Fixed width */
+    height: 120px; /* Fixed height */
+    overflow: hidden; /* Hide overflow if necessary */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-bottom: -20px;
+    margin-top: -10px; /* Space below image */
+}
+
+.image-tcontainer{
+    width: 100px;  /* Fixed width */
+    height: 100px; /* Fixed height */
+    overflow: hidden; /* Hide overflow if necessary */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-bottom: 0px;
+    margin-top: -10px; /* Space below image */
+}
+
+
+.image-container {
+    width: 100px;  /* Fixed width */
+    height: 100px; /* Fixed height */
+    overflow: hidden; /* Hide overflow if necessary */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-bottom: 10px; /* Space below image */
+}
+
+.image-container img {
+    max-width: 100%;  /* Scale image to fit the container */
+    max-height: 100%; /* Scale image to fit the container */
+    object-fit: contain; /* Ensure image maintains aspect ratio */
+    mix-blend-mode: multiply;
+}
+
+.image-scontainer img {
+    max-width: 100%;  /* Scale image to fit the container */
+    max-height: 100%; /* Scale image to fit the container */
+    object-fit: contain; /* Ensure image maintains aspect ratio */
+    mix-blend-mode: multiply;
+}
+
+.image-tcontainer img {
+    max-width: 100%;  /* Scale image to fit the container */
+    max-height: 100%; /* Scale image to fit the container */
+    object-fit: contain; /* Ensure image maintains aspect ratio */
+    mix-blend-mode: multiply;
+}
+/* ----------------*/
+/*  6. Contacto    */
+/* ----------------*/
+.Contacto_container {
+    margin-bottom: -2vw;
+    margin-top: -2vw;
+  }
+
+  .contact_title{
+    font-size: 3vw;
+    margin-bottom: -5vw;
+  }
+
+  .contact-description{
+    font-family: "Century Gothic";
+  }
+
+
+  /* Definir container para os quadrados*/
+  .container_contact {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+  /* Definir  os quadrados*/
+.contact_square {
+    width: 250px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.circle {
+    background-color: rgba(198,137,62, 0.2);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto -5px;
+}
+
+.circle img {
+    width: 25px;
+    mix-blend-mode: multiply;
+}
+
+
+.cont_title{
+    font-size: 14px;
+    font-family: "Century Gothic";
+    margin-bottom: -20px;
+}
+
+.cont_description{
+    font-size: 12px;
+    font-family: "Century Gothic";
+    color: grey;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+hr {
+    border: none; /* Remove the default border */
+    border-top: 1px solid #ddd; /* Add a visible border on top */
+    width: 100%; /* Ensure it spans the width of the container */
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 8px 80px;
+    font-size: 12px;
+    font-family: "Century Gothic";
+    background-color: rgba(198,137,62);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: orange;
 }
