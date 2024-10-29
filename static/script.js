@@ -48,6 +48,22 @@ document.getElementById('scroll-to-section').addEventListener('click', function(
     }
 }
 
+
+  function scrollToContact() {
+    const targetSection = document.getElementById('Contato');
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function scrollToContacts() {
+    const targetSection = document.getElementById('Contato');
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+
 // SHOW MORE BUTON (CARDÁPIO)
 function showMore() {
     var hiddenItems = document.querySelectorAll('.hidden');
