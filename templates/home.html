@@ -8,12 +8,14 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-NWL83Q3H');</script>
   <!-- End Google Tag Manager -->
+ 
+  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="static/css/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> <!--Linking swiper-->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">    <!-- Linking swiper-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  <!-- Linking swiper-->
   <script src="static/script.js"></script> 
   <title>GRAZIA PIZZERIA</title>
   <link rel="icon" type="image/x-icon" href="static/logo.png">
@@ -21,32 +23,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
-
 </head>
-<body>
+
+  <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWL83Q3H"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!-- CRETE HERO SECTION -->
 
-  <!--<div class="hero">
-    <img src="static/hero-section-extended.png" alt="hero-image" style="width:100%">
-    <div class="header-content">
-      <img src="static/logo.png" alt="Logo" class="logo">
-      <h1>GRAZIA</h1>
-      <nav class="menu">
-        <ul>
-          <li class="clickable-div" id="scroll-to-section0"><a href="#About" style="text-decoration: none; color: white">Conheça-nos</a></li>
-          <li class="clickable-div" id="scroll-to-section1"><a href="#Nossa" style="text-decoration: none; color: white">Nossa pizza</a></li>
-          <li class="clickable-div" id="scroll-to-section2"><a href="#Cardapio" style="text-decoration: none; color: white">Cardápio</a></li>
-          <li class="clickable-div" id="scroll-to-section3"><a href="#Galeria" style="text-decoration: none; color: white">Galeria</a></li>
-          <li class="clickable-div" id="scroll-to-section4"><a href="#Depoimentos" style="text-decoration: none; color: white">Depoimentos</a></li>
-          <li class="clickable-div" id="scroll-to-section5"><a href="#Contacto" style="text-decoration: none; color: white">Contacto</a></li>
-          <li class="clickable-div" id="scroll-to-section5"><a href="#Informação" style="text-decoration: none; color: white">Informações</a></li>
-        </ul>
-      </nav>
-    </div>-->
 
 <!-- CRETE HERO SECTION -->
 <header class="hero-header">
@@ -69,22 +54,38 @@
                 <li class="clickable-div" id="scroll-to-section"><a href="#Informacao" style="text-decoration: none; color: rgba(42,42,42)" >Informações</a></li>
               </ul>
           </nav>
-          <button class="menu-icon" id="menu-icon">&#9776;</button>
-      </div>
-  </div>
+          <!--hamburguer dropdown icon-->
+            <button class="menu-icon" id="menu-icon">&#9776;</button>
+           <!-- Mobile dropdown menu -->
+            <div id="mobile-menu" class="mobile-menu">
+             <a href="#About">Conheça-nos</a>
+             <a href="#Nossa">Nossa pizza</a>
+             <a href="#Cardapio">Cardápio</a>
+             <a href="#Galeria">Galeria</a>
+             <a href="#Depoimentos">Depoimentos</a>
+             <a href="#Informacao">Informações</a>
+            </div>
+    </div>
+</div>
 
-     <!-- welcome info -->
+  
+    <!-- welcome info -->
      <div class="welcome-container">
       <p style="margin-bottom:0vw;" class="welcome_title">Bem-vindo</p>
       <p style="margin : 0vw; padding-top:0vw;" class="welcome_title">à GRAZIA</p>
       <p style="margin : 0vw; padding-top:0vw;" class="welcome_title">PIZZERIA</p>
+      <p class="hidden-welcome">Bem vindo à</p>
+      <p class="hidden-welcome">GRAZIA PIZZERIA</p>
       <p class="welcome_p"> Eleve o seu evento com a sofisticação de uma jornada</p> 
       <p class="welcome_p"> gastronômica, apreciando a autêntica pizza napoletana.</p>
     </div>
 
+  
     <!-- Contact square -->
-    <div class="contact-container" onclick="scrollToContact('Contato')">
-      <p>Entre em contacto connosco</p>
+    <div class="contact_position">
+      <div class="contact-container" onclick="scrollToContact('Contato')">
+        <p>Entre em contacto connosco</p>
+      </div>
     </div>
 
     <!-- Scroll down text and square -->
@@ -94,19 +95,20 @@
           <img src="static/arrow(2).png" alt="Arrow" class="arrow" style="width: 60%; height: 60%; object-fit: contain;">
       </div>
   </div>
-  </div>
+</div>
 
 
  <!-- CRETE ABOUT US SECTION -->
  <div class="container", id="About">
+   <h2 class="hidden_about la-belle-aurore-regular">Conheça-nos</h2>
   <div class="about">
       <img src="static/pizza_about.jpg" alt="pizza_about" class="image_about">
       <div class="text-content">
           <h2 class="la-belle-aurore-regular">Conheça-nos</h2>
           <p class="about_text"> 
-            Na Grazia Pizzeria, oferecemos uma experiência gastronômica incomparável, onde a tradição.
-            Nossas pizzas Napoletanas são elaboradas com ingredientes importados diretamente da Itália e finalizadas
-            com produtos selecionados à mão, proporcionando uma experiência idêntica à das melhores
+            Na Grazia Pizzeria, oferecemos uma experiência gastronômica incomparável, onde a tradição se funde
+            com a sofisticação e a inovação. Nossas pizzas Napoletanas são elaboradas com ingredientes importados diretamente da
+            Itália e finalizadas com produtos selecionados à mão, proporcionando uma experiência idêntica à das melhores
             pizzerias de Nápoles. Cada pizza que servimos transforma-se em uma experiência memorável.
             Com um menu cuidadosamente elaborado, temos o prazer de participar de eventos exclusivos, 
             pequenas reuniões e degustações personalizadas. Deixe-nos levar o melhor da cozinha italiana
@@ -239,9 +241,7 @@
       </p>
     </div>
 
-
-
-<!--Butões -->
+                                                                <!--Butões -->
   <div class="text-container">
     <button class="bt" id="showMoreBtn" onclick="showMore()">
       <img src="static/arrow(2).png" alt="Logo" class="arrow1" style="width: 70%; height: 70%; object-fit: contain;">
@@ -249,11 +249,12 @@
     <span class="span-container" id="showMoreText">Cardápio completo</span>
   </div>
 
-<div class="text-container">
-    <button class="bt1" id="showLessBtn" onclick="showLess()" style="display: none;">
-      <img src="static/seta.png" alt="Logo" class="arrow1" style="width: 70%; height: 70%; object-fit: contain;">
-    </button>
-    <span class="span-container" id="showLessText" style="display: none;">Fechar cardápio</span>
+  <div class="text-container">
+      <button class="bt1" id="showLessBtn" onclick="showLess()" style="display: none;">
+        <img src="static/seta.png" alt="Logo" class="arrow1" style="width: 70%; height: 70%; object-fit: contain;">
+      </button>
+      <span class="span-container" id="showLessText" style="display: none;">Fechar cardápio</span>
+  </div>
 </div>
 
  <!-- GALERIA -->   
@@ -277,39 +278,23 @@
     <div class="item img12"><img  src="static/fiorenza 5.jpeg"></div>
     <div class="item img13"><img  src="static/pepperoni2.png"></div>
  </div>
+
+    <div class="container_gallery1" id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+        <div class="item img1"> <img class="image" src="static/pexels.jpg" draggable="false"></div>
+        <div class="item img2"><img  class="image" src="static/andiamo.jpg"  draggable="false"></div>
+        <div class="item img3"><img  class="image" src="static/parma.jpg"  draggable="false"></div>
+        <div class="item img4"><img  class="image" src="static/top.jpeg" draggable="false"></div>
+        <div class="item img5"><img  class="image" src="static/vege.jpg" draggable="false"></div>
+        <div class="item img6"><img  class="image" src="static/pistache.jpg" draggable="false"> </div>
+        <div class="item img7"><img  class="image" src="static/tomate.jpg" draggable="false"></div>
+        <div class="item img8"><img  class="image" src="static/parma2.jpg" draggable="false"></div> 
+        <div class="item img9"><img  class="image" src="static/wine.jpeg" draggable="false"></div>
+        <div class="item img10"><img  class="image" src="static/andiamo_cut.jpg" draggable="false"></div>
+        <div class="item img11"><img  class="image" src="static/Pizza tirreno 1.jpeg" draggable="false"></div> 
+        <div class="item img12"><img  class="image" src="static/fiorenza 5.jpeg" draggable="false"></div>
+        <div class="item img13"><img  class="image" src="static/pepperoni2.png" draggable="false"></div>
+     </div>
 </div>
-
-
-<!-- EVENTOS
-<div class="container_evento">
-  <div class="evento_title"><h2 class="fuggles-regular">Eventos em destaque</h2></div>
-
-  <div class="wrapper">
-    <div class="main-scroll-div">
-      <div><button class="icon" onclick="scrolll()">
-        <img  class="button-img" src="static/back_arr.png">
-      </button></div>
-      <div class = "cover">
-        <div class="scroll-images"  id="scrollImages">
-          <div class="btn1" onclick="playVideo('static/video_wine.mp4')">
-            <img class="child" src="static/wine.png">
-          </div>
-          <div class="btn2"><img class="child" src="static/amaral.png"></div>
-          <div class="btn3"><img class="child" src="static/aniversário_.png"></div>
-        </div>
-      </div>
-      <div><button class="icon"  onclick="scrollr()" >
-        <img class="button-img" src="static/forward_arr.png">
-      </button></div>
-    </div>
-  </div>
-</div>
-
-<div class="clip" id="clipContainer" style="display: none;">
-  <video id="videoPlayer" controls></video>
-  <b class="close" onclick="closeVideo()">Fechar</b>
-</div>
--->
 
 
 <!--DEPOIMENTOS-->
@@ -534,11 +519,63 @@
         </div>
       </div>
     </div>
+
+
+                              <!-- HIDEEN Values-->
+    <div class="contact-list">
+      <!--Whatsapp square-->
+      <div class="contact_rectangle">
+        <div class="circle">
+          <img src="static/whats1.jpg" alt="Image">
+        </div>
+        <div class="wa-me">
+          <a href="https://wa.me/5541996286598" target="_blank">
+            <button class="btn">(41)996286598</button></a>
+        </div>
+      </div>
+
+    <!--Email square-->
+    <div class="contact_rectangle">
+      <div class="circle">
+        <img src="static/email.png" alt="Image">
+      </div>
+      <div class="mail-me">
+          <a href="mailto:graziapizzeria@gmail.com?subject=Pedido%20de%20%orçamento&body=Gostaria%20de%20a%20question" target="_blank">
+            <button class="btn">graziapizzeria@gmail.com</button></a>
+      </div>
+    </div>
+
+    <!--Insta square-->
+    <div class="contact_rectangle">
+      <div class="circle">
+        <img src="static/insta.png" alt="Image">
+      </div>
+      <div class="insta-me">
+        <a href="https://www.instagram.com/graziapizzeria_/" target="_blank">
+          <button class="btn">@graziapizzeria_</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  
 </div>
 
 
 
 <script>
+
+  // ------------- Update image-------------------//
+function updateImage() {
+    const image = document.getElementById('heroImage');
+    if (window.innerWidth <= 768) {
+      image.src ='static/mobile_image4.png';
+    } else {
+      image.src = 'static/ahero.jpeg';
+    }
+  }  window.addEventListener('resize', updateImage);
+  window.addEventListener('load', updateImage);
+
+  // --------------- Use wiper -----------------//
   var swiper = new Swiper('.swiper', {
     // Habilita navegação com setas
     navigation: {
@@ -564,7 +601,70 @@
       disableOnInteraction: false, // Continua após interação
     },
   });
-</script>
 
+
+  // Function to update slidesPerView based on screen size
+  function updateSwiperSlides() {
+      if (window.matchMedia("(max-width: 768px)").matches) {
+          swiper.params.slidesPerView = 2;
+      } else {
+          swiper.params.slidesPerView = 6; // Default value for larger screens
+      }
+      swiper.update(); // Refresh Swiper with new parameters
+  }
+
+  // Listen for screen size changes and update swiper
+  window.addEventListener('resize', updateSwiperSlides);
+  // Initial call to set the correct slidesPerView on page load
+  updateSwiperSlides();
+
+  //-------- --------- AWARD WINING SCROLL ------//
+  const track = document.getElementById("image-track");
+
+  const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+
+  const handleOnUp = () => {
+    track.dataset.mouseDownAt = "0";  
+    track.dataset.prevPercentage = track.dataset.percentage;
+  }
+
+  const handleOnMove = e => {
+    if(track.dataset.mouseDownAt === "0") return;
+
+    const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+          maxDelta = window.innerWidth * 1.5;
+
+    const percentage = (mouseDelta / maxDelta) * -100,
+          nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+          nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -95);
+
+    track.dataset.percentage = nextPercentage;
+
+    track.animate({
+      transform: `translate(${nextPercentage}%, -50%)`
+    }, { duration: 1200, fill: "forwards" });
+
+   /* for(const image of track.getElementsByClassName("image")) {
+      image.animate({
+        objectPosition: `${100+ nextPercentage}% center`
+      }, { duration: 1200, fill: "forwards" });
+    }*/
+  }
+
+  /* -- Had to add extra lines for touch events -- */
+
+  window.onmousedown = e => handleOnDown(e);
+
+  window.ontouchstart = e => handleOnDown(e.touches[0]);
+
+  window.onmouseup = e => handleOnUp(e);
+
+  window.ontouchend = e => handleOnUp(e.touches[0]);
+
+  window.onmousemove = e => handleOnMove(e);
+
+  window.ontouchmove = e => handleOnMove(e.touches[0]);
+
+</script>
 </body>
 </html>

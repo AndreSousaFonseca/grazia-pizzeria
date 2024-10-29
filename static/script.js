@@ -1,3 +1,36 @@
+// Dropdown menu
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.querySelector('.menu-icon');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuLinks = mobileMenu.querySelectorAll('a'); // Seleciona todos os links dentro do menu
+
+    menuIcon.addEventListener('click', function (event) {
+      event.stopPropagation(); // Evita que o clique no ícone feche o menu
+      // Alterna a exibição do menu
+      if (mobileMenu.style.display === 'flex') {
+        mobileMenu.style.display = 'none';
+      } else {
+        mobileMenu.style.display = 'flex';
+      }
+    });
+
+    // Fecha o menu caso clique fora do menu ou do ícone
+    document.addEventListener('click', function (event) {
+      if (!menuIcon.contains(event.target) && !mobileMenu.contains(event.target)) {
+        mobileMenu.style.display = 'none';
+      }
+    });
+
+    // Fecha o menu ao clicar em qualquer link dentro dele
+    menuLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.style.display = 'none';
+      });
+    });
+  });
+
+
+
 // Scroll to Specific sections
 document.getElementById('scroll-to-section').addEventListener('click', function() {
     document.getElementById('About').scrollIntoView({ 
@@ -7,7 +40,6 @@ document.getElementById('scroll-to-section').addEventListener('click', function(
   });
 
 
-
   // Scroll down shape
   function scrollToSection() {
     const targetSection = document.getElementById('About');
@@ -15,21 +47,6 @@ document.getElementById('scroll-to-section').addEventListener('click', function(
         targetSection.scrollIntoView({ behavior: 'smooth' });
     }
 }
-
-
-  function scrollToContact() {
-    const targetSection = document.getElementById('Contato');
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-function scrollToContacts() {
-    const targetSection = document.getElementById('Contato');
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
 
 // SHOW MORE BUTON (CARDÁPIO)
 function showMore() {
@@ -120,38 +137,4 @@ function showLess() {
         }, 10);  // Breve atraso para aplicar a transição
     }, 300);  // Tempo da transição
 }
-
-
-/// DEPOIMENTOS
-
-// EVENTOS
-//function scrolll(){
-//    var left=document.querySelector(".scroll-images");
-//   left.scrollBy(-350,0)
-//}
-
-//function scrollr(){
-//    var left=document.querySelector(".scroll-images");
-//    left.scrollBy(350,0)
-//}
-
-///////////////
-//function playVideo(src) {
-//    const videoPlayer = document.getElementById('videoPlayer');
-//    const clipContainer = document.getElementById('clipContainer');
-//  
-//    videoPlayer.src = src;
-//    clipContainer.style.display = 'block';  // Show the video container
-//    videoPlayer.load();  // Load the video source (this initializes the video)
-//    videoPlayer.play();  // Automatically start playing the video
-//  }
-//  
-//  function closeVideo() {
-//    const videoPlayer = document.getElementById('videoPlayer');
-//    const clipContainer = document.getElementById('clipContainer');
-//  
-//    videoPlayer.pause();  // Pause the video
-//    videoPlayer.src = '';  // Clear the video source
-//    clipContainer.style.display = 'none';  // Hide the video container
-//  }
 
