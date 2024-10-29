@@ -64,6 +64,7 @@
              <a href="#Galeria">Galeria</a>
              <a href="#Depoimentos">Depoimentos</a>
              <a href="#Informacao">Informações</a>
+            <a href="#Contato">Contacto</a>
             </div>
     </div>
 </div>
@@ -572,9 +573,7 @@ function updateImage() {
     const image = document.getElementById('heroImage');
     if (window.innerWidth <= 768) {
       image.src ='static/mobile_image4.png';
-    } else {
-      image.src = 'static/ahero.jpeg';
-    }
+    } 
   }  window.addEventListener('resize', updateImage);
   window.addEventListener('load', updateImage);
 
