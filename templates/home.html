@@ -39,7 +39,7 @@
 </header>
 
 <div class="hero" style="position: relative; width: 100%; height: auto;" id= "Hero">
-  <img src="static/ahero.jpeg" alt="hero-image" class="responsive-image" width="100%"><!-- hero-section image-->
+  <img id="heroImage" src="static/ahero.jpeg" alt="hero-image" class="responsive-image" width="100%"><!-- hero-section image-->
   <div class="navigation_bar"><!-- hero-section Menu-->
       <div class="hero_container" >
           <nav>
@@ -104,7 +104,9 @@
   <div class="about">
       <img src="static/pizza_about.jpg" alt="pizza_about" class="image_about">
       <div class="text-content">
+         <div class="title_about">
           <h2 class="la-belle-aurore-regular">Conheça-nos</h2>
+         </div>
           <p class="about_text"> 
             Na Grazia Pizzeria, oferecemos uma experiência gastronômica incomparável, onde a tradição se funde
             com a sofisticação e a inovação. Nossas pizzas Napoletanas são elaboradas com ingredientes importados diretamente da
@@ -448,7 +450,8 @@
       <div class="image-tcontainer">
         <img src="static/forno.png" alt="Image">
     </div>
-      <h3 class="info_title">O que está incluso no evento</h3>
+      <h3 class="info_title incluso">O que está incluso no evento</h3>
+      <h3 class="info_title hidden">O que está incluso </h3>
       <p class="info_description">Forno, botijão de gás e utensílios para servir a pizza. Pratos, talheres e copos competem ao contratante que também deve assegurar o espaço de trabalho.</p>
     </div>
     <!--Peel-->
@@ -537,7 +540,7 @@
     <!--Email square-->
     <div class="contact_rectangle">
       <div class="circle">
-        <img src="static/email.png" alt="Image">
+        <img src="static/mail.jpg" alt="Image">
       </div>
       <div class="mail-me">
           <a href="mailto:graziapizzeria@gmail.com?subject=Pedido%20de%20%orçamento&body=Gostaria%20de%20a%20question" target="_blank">
@@ -636,7 +639,7 @@ function updateImage() {
 
     const percentage = (mouseDelta / maxDelta) * -100,
           nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-          nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -95);
+          nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -90);
 
     track.dataset.percentage = nextPercentage;
 

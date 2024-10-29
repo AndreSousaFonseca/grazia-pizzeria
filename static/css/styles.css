@@ -1015,6 +1015,10 @@ hr {
   display: none;
 }
 
+.info_title.hidden{
+  display:none
+}
+
                           /*********************/
                           /* Responsive Design */
                           /*********************/
@@ -1383,6 +1387,14 @@ margin-bottom: -6vw;
   padding: 0px;
 }
 
+.info_title.hidden{
+  display: block;
+}
+
+.info_title.incluso{
+  display:none;
+}
+
 .inner-div{
   box-shadow: 
   0 0px 0px 0 rgba(255, 255, 255, 0.0), /* Top shadow (none) */
@@ -1409,40 +1421,42 @@ margin-bottom: -6vw;
 }
 
 .contact-list {
+  align-items: center;
   display: block;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Espaço entre os elementos */
+  gap: 10px; /* Espaço entre os elementos */
 }
 
 .contact_rectangle{
+  width: 250px;
   display: flex;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid rgba(198,137,62);;
   border-radius: 20px;
-  padding: 1px;
+  padding: 0px;
  }
 
  .circle {
   width: 30px; /* Adjust size as needed */
   height: 30px; /* Same as width for a perfect circle */
-  background-color:white;
+  background-color:rgba(198,137,62, 0.2);
   border-radius: 50%; /* Makes the div a circle */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden; /* Ensures image stays within the circle */
-  margin-right: 10px; /* Espaço entre a imagem e o botão */
-  margin-left: 10px;
+  margin-right: 0px; /* Espaço entre a imagem e o botão */
+  margin-left: 5px;
   z-index: 1;
+  margin-bottom: 1px;
 }
 
 .circle img{
- filter: brightness(1) invert(0);
  width: 20px;
  height: auto;
  z-index: 2; /* Garante que fique acima de outros elementos */
-
+ mix-blend-mode: multiply;
 }
 
 .btn{
@@ -1456,4 +1470,8 @@ margin-bottom: -6vw;
   padding: 10px;
 }
 
+.btn:hover{
+    background-color: transparent
+  }
+  
 }
