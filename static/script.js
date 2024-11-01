@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Scroll to Specific sections
-document.getElementById('scroll-to-section').addEventListener('click', function() {
-    document.getElementById('About').scrollIntoView({ 
+document.getElementById("scroll-to-section").addEventListener('click', function() {
+    document.getElementById().scrollIntoView({ 
       behavior: 'smooth', /* Smooth scroll */
       block: 'start' /* Align to the top */
     });
