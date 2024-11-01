@@ -39,7 +39,7 @@
 </header>
 
 <div class="hero" style="position: relative; width: 100%; height: auto;" id= "Hero">
-  <img id="heroImage" src="static/ahero.jpeg" alt="hero-image" class="responsive-image" width="100%"><!-- hero-section image-->
+  <!--<img id="heroImage" src="static/ahero.jpeg" alt="hero-image" class="responsive-image" width="100%"> -->
   <div class="navigation_bar"><!-- hero-section Menu-->
       <div class="hero_container" >
           <nav>
@@ -573,7 +573,9 @@ function updateImage() {
     const image = document.getElementById('heroImage');
     if (window.innerWidth <= 768) {
       image.src ='static/mobile_image4.png';
-    } 
+    } else {
+      image.src = 'static/ahero.jpeg';
+    }
   }  window.addEventListener('resize', updateImage);
   window.addEventListener('load', updateImage);
 
